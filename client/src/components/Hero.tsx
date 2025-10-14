@@ -39,12 +39,12 @@ export default function Hero() {
           </div>
 
           <div className="order-1 md:order-2 flex justify-center">
-            <div className="relative w-full max-w-md">
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-primary/5 rounded-3xl blur-2xl" />
+            <div className="relative w-72 h-72 md:w-80 md:h-80 lg:w-96 lg:h-96">
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/30 to-primary/10 rounded-full blur-3xl" />
               <img
                 src={heroImage}
                 alt="Samuel Chege Waweru"
-                className="relative rounded-3xl shadow-2xl w-full"
+                className="relative rounded-full shadow-2xl w-full h-full object-cover object-top"
                 data-testid="img-hero"
               />
             </div>
