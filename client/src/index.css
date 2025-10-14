@@ -76,7 +76,7 @@
   --chart-4: 200 35% 45%;
   --chart-5: 15 40% 50%;
 
-  --font-sans: Inter, Poppins, sans-serif;
+  --font-sans: 'Outfit', 'Space Grotesk', sans-serif;
   --font-serif: Georgia, serif;
   --font-mono: Menlo, monospace;
   --radius: .5rem;
