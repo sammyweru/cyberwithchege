@@ -1,6 +1,6 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Award, Clock } from "lucide-react";
+import { Award } from "lucide-react";
 
 const certifications = [
   {
@@ -41,6 +41,44 @@ const certifications = [
   }
 ];
 
+function AnimatedClock() {
+  return (
+    <svg width="20" height="20" viewBox="0 0 24 24" className="text-muted-foreground">
+      <circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" strokeWidth="2" />
+      {/* Hour hand - rotates every 12 seconds */}
+      <line
+        x1="12"
+        y1="12"
+        x2="12"
+        y2="7"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        className="origin-center"
+        style={{
+          animation: 'spin 12s linear infinite',
+          transformOrigin: '12px 12px'
+        }}
+      />
+      {/* Minute hand - rotates every 3 seconds */}
+      <line
+        x1="12"
+        y1="12"
+        x2="12"
+        y2="5"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        className="origin-center"
+        style={{
+          animation: 'spin 3s linear infinite',
+          transformOrigin: '12px 12px'
+        }}
+      />
+    </svg>
+  );
+}
+
 export default function Certifications() {
   return (
     <section id="certifications" className="py-24 px-6 bg-card">
@@ -69,7 +107,7 @@ export default function Certifications() {
                     {cert.status === 'completed' ? (
                       <Award className="w-5 h-5 text-primary" />
                     ) : (
-                      <Clock className="w-5 h-5 text-muted-foreground" />
+                      <AnimatedClock />
                     )}
                   </div>
                 </div>

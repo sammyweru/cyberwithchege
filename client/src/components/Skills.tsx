@@ -8,11 +8,11 @@ const skillsData = [
     sections: [
       {
         subtitle: "Platforms",
-        content: "AWS, Azure, Oracle Cloud Infrastructure (OCI)"
+        content: "Oracle Cloud Infrastructure (OCI)"
       },
       {
         subtitle: "Core Services",
-        content: "IAM (Identity & Access Management), VPC/VNet, Security Groups, NACLs, Foundational EC2, S3, Compute & Storage."
+        content: "IAM (Identity & Access Management), Virtual Cloud Networks (VCN), Security Groups, Network Security Groups (NSG), Security Lists, Compute Instances, Object Storage, Block Volumes, Load Balancers, Bastion Service, Cloud Guard, Security Zones, Vault, Web Application Firewall (WAF)."
       }
     ]
   },
@@ -22,11 +22,11 @@ const skillsData = [
     sections: [
       {
         subtitle: "Architecture",
-        content: "Network Design, VLAN Segmentation, Subnetting, WAN Routing (OSPF)"
+        content: "Network Design, VLAN Segmentation, Subnetting, WAN Routing (OSPF), Dynamic Routing Protocols, Hierarchical Network Design, Redundancy & Failover, EtherChannel, RSTP."
       },
       {
         subtitle: "Security",
-        content: "Access Control Lists (ACLs), Firewall Configuration, NAT/PAT, DHCP Snooping."
+        content: "Access Control Lists (ACLs), Firewall Configuration, NAT/PAT, DHCP Snooping, Port Security, First Hop Redundancy Protocols (HSRP/VRRP), Network Segmentation, DMZ Configuration, VPN Technologies, Intrusion Detection/Prevention."
       }
     ]
   },
@@ -36,11 +36,11 @@ const skillsData = [
     sections: [
       {
         subtitle: "Tools",
-        content: "Wireshark, Nmap, Metasploit (Foundational)"
+        content: "Wireshark, Nmap, Metasploit"
       },
       {
         subtitle: "Techniques",
-        content: "Traffic Analysis, OSINT, Vulnerability Assessment, Metadata Analysis."
+        content: "Traffic Analysis, OSINT, Vulnerability Assessment."
       }
     ]
   }
