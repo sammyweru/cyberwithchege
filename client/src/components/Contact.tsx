@@ -5,17 +5,66 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Github, Linkedin } from "lucide-react";
 import { SiX } from "react-icons/si";
+import { useMutation } from "@tanstack/react-query";
+import { apiRequest } from "@/lib/queryClient";
+import { useToast } from "@/hooks/use-toast";
+import { contactFormSchema } from "@shared/schema";
+
+type ContactForm = {
+  name: string;
+  email: string;
+  message: string;
+};
 
 export default function Contact() {
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<ContactForm>({
     name: "",
     email: "",
     message: ""
   });
+  const { toast } = useToast();
+
+  const contactMutation = useMutation({
+    mutationFn: async (data: ContactForm) => {
+      const response = await apiRequest("POST", "/api/contact", data);
+      return await response.json();
+    },
+    onSuccess: () => {
+      toast({
+        title: "Message sent!",
+        description: "Thank you for reaching out. I'll get back to you soon.",
+      });
+      // Reset form
+      setFormData({
+        name: "",
+        email: "",
+        message: ""
+      });
+    },
+    onError: (error: any) => {
+      toast({
+        title: "Error sending message",
+        description: error.message || "Something went wrong. Please try again.",
+        variant: "destructive",
+      });
+    },
+  });
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
+    
+    // Validate form data
+    const validation = contactFormSchema.safeParse(formData);
+    if (!validation.success) {
+      toast({
+        title: "Validation Error",
+        description: validation.error.errors[0].message,
+        variant: "destructive",
+      });
+      return;
+    }
+
+    contactMutation.mutate(formData);
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -114,9 +163,10 @@ export default function Contact() {
             type="submit"
             size="lg"
             className="w-full"
+            disabled={contactMutation.isPending}
             data-testid="button-submit"
           >
-            Send Message
+            {contactMutation.isPending ? "Sending..." : "Send Message"}
           </Button>
         </form>
       </div>
