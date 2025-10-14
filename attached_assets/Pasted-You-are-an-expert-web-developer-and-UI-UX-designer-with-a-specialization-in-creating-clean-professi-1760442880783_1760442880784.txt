@@ -1,0 +1,74 @@
+You are an expert web developer and UI/UX designer with a specialization in creating clean, professional, and secure portfolio websites. Your task is to build a complete, modern, and fully responsive personal portfolio website for a Cloud Security Engineer named Samuel Chege Waweru.
+The website's overall aesthetic must be professional, trustworthy, and minimalist. Adhere strictly to the following design and content instructions for each section.
+1. Overall Design & Theme:
+Color Palette:
+Primary Background: A warm, professional cream or off-white (e.g., #F5F5DC).
+Primary Text: A dark slate gray for readability (e.g., #2F4F4F).
+Accent Color: A muted, sophisticated gold/tan for buttons, links, and highlights (e.g., #C4A484).
+Typography: Use a clean, modern, sans-serif font family. "Inter" or "Poppins" are excellent choices. Ensure font sizes and weights create a clear visual hierarchy.
+Layout: The design must be fully responsive and mobile-first, looking perfect on all devices from phones to desktops. Use ample white space to ensure a clean, uncluttered feel.
+2. Website Structure & Content:
+Create a single-page website with a navigation bar that smoothly scrolls to the following sections: Home, About, Skills, Projects, Contact.
+A. Hero Section (Top of the page):
+Main Heading (H1): Samuel Chege Waweru
+Subheading/Tagline (H2): Building and Defending the Secure Cloud | Cloud Security • DevSecOps • Networking
+Call to Action Buttons: Include two buttons side-by-side below the tagline:
+"View My Work" (links to the Projects section)
+"Get In Touch" (links to the Contact section)
+B. About Me Section:
+Section Title: About Me
+Content: Use the following text exactly:
+I don't just secure networks; I architect trust. My journey from a self-taught network builder to a distinction-level cybersecurity graduate taught me one thing: the best defense is a resilient design. Now, as a certified OCI Associate, my singular focus is on applying DevSecOps principles and a "defense in depth" mindset to build and protect the cloud infrastructure that powers our future.
+C. Skills & Expertise Section:
+Section Title: My Professional Toolbox
+Introductory Paragraph: Before listing the skills, include this paragraph:
+A modern security engineer is a craftsman, and every craftsman needs a well-stocked toolbox. My skills are not just a list of technologies; they are the tools I use to architect, build, and defend resilient digital environments. Here’s what’s in my toolbox:
+Layout: Display the skills in three distinct columns or cards, one for each category below.
+Card 1 Title: Cloud Architecture & Security
+Subtitle: Platforms
+Content: AWS, Azure, Oracle Cloud Infrastructure (OCI)
+Subtitle: Core Services
+Content: IAM (Identity & Access Management), VPC/VNet, Security Groups, NACLs, Foundational EC2, S3, Compute & Storage.
+Card 2 Title: Network Engineering & Defense
+Subtitle: Architecture
+Content: Network Design, VLAN Segmentation, Subnetting, WAN Routing (OSPF)
+Subtitle: Security
+Content: Access Control Lists (ACLs), Firewall Configuration, NAT/PAT, DHCP Snooping.
+Card 3 Title: Security Analysis & Threat Intelligence
+Subtitle: Tools
+Content: Wireshark, Nmap, Metasploit (Foundational)
+Subtitle: Techniques
+Content: Traffic Analysis, OSINT, Vulnerability Assessment, Metadata Analysis.
+D. Featured Projects Section:
+Section Title: Featured Projects
+Layout: Create a grid of 3 project cards. Each card must be visually distinct and contain the following information:
+Project Card 1:
+Title: High-Availability Enterprise Network Design
+Summary: Architected a fault-tolerant, three-tier hierarchical network for a simulated hospital, implementing redundant Layer 3 switching and first-hop redundancy to guarantee uptime for critical services.
+Technologies Used (Display as tags/pills): Cisco Packet Tracer, Hierarchical Design, L3 Switching, HSRP, RSTP, EtherChannel
+Buttons: "View on GitHub", "Read the Story"
+Project Card 2:
+Title: Secure Multi-Site WAN & Internet Edge
+Summary: Designed and configured a multi-site enterprise network using dynamic routing (OSPF) and established a secure internet edge with an ACL-based firewall and Network Address Translation (NAT).
+Technologies Used (Display as tags/pills): Cisco Packet Tracer, OSPF, WAN, ACLs, Firewall, NAT
+Buttons: "View on GitHub", "Read the Story"
+Project Card 3:
+Title: Network Reconnaissance & Vulnerability Identification
+Summary: Conducted hands-on security analysis using industry-standard tools to perform host discovery, port scanning, and service enumeration to identify a target network's attack surface from an attacker's perspective.
+Technologies Used (Display as tags/pills): Nmap, Wireshark, Netcat, Vulnerability Assessment
+Buttons: "View on GitHub", "Read the Story"
+Functionality: Link the "View on GitHub" buttons for all projects to https://github.com/sammyweru.
+E. Contact Section:
+Section Title: Get In Touch
+Social Links:
+CRITICAL INSTRUCTION: Do NOT display raw text links. Use clean, modern ICONS for LinkedIn, GitHub, and X (Twitter).
+The icons must be clickable and open the corresponding links in a new browser tab.
+LinkedIn: https://linkedin.com/in/samuelchegewaweru
+GitHub: https://github.com/sammyweru
+X: https://x.com/cyberwithchege
+Contact Form:
+Create a contact form with fields for "Name", "Email", and "Message".
+SECURITY BEST PRACTICES (MANDATORY): The website's security is paramount. The contact form must NOT use a simple mailto: action. It must submit data to a secure backend function (like a Replit Autoscale Deployment). Implement both client-side and server-side validation and sanitization for all inputs to prevent XSS, injection, and other attacks. The function should securely forward the message to this email: chegesam68@gmail.com.
+F. Footer:
+Create a simple, clean footer containing: "© 2025 Samuel Chege Waweru. All Rights Reserved."
+
