@@ -20,6 +20,16 @@ export async function registerRoutes(app: Express): Promise<Server> {
 
       const { name, email, message } = validationResult.data;
 
+      // HTML escape utility to prevent XSS in emails
+      const escapeHtml = (text: string) => {
+        return text
+          .replace(/&/g, '&amp;')
+          .replace(/</g, '&lt;')
+          .replace(/>/g, '&gt;')
+          .replace(/"/g, '&quot;')
+          .replace(/'/g, '&#039;');
+      };
+
       // Send email using Resend
       const { client, fromEmail } = await getUncachableResendClient();
       
@@ -27,13 +37,13 @@ export async function registerRoutes(app: Express): Promise<Server> {
         from: fromEmail,
         to: 'samuelchegewaweru@gmail.com', // Portfolio owner's email
         replyTo: email,
-        subject: `Portfolio Contact: Message from ${name}`,
+        subject: `Portfolio Contact: Message from ${escapeHtml(name)}`,
         html: `
           <h2>New Contact Form Submission</h2>
-          <p><strong>From:</strong> ${name}</p>
-          <p><strong>Email:</strong> ${email}</p>
+          <p><strong>From:</strong> ${escapeHtml(name)}</p>
+          <p><strong>Email:</strong> ${escapeHtml(email)}</p>
           <p><strong>Message:</strong></p>
-          <p>${message.replace(/\n/g, '<br>')}</p>
+          <p>${escapeHtml(message).replace(/\n/g, '<br>')}</p>
         `,
       });
 
