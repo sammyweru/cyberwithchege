@@ -9,7 +9,7 @@ export default function CTF() {
         </h2>
         
         <div className="relative py-8">
-          <div className="flex justify-center mb-12">
+          <div className="flex justify-center">
             <svg
               width="200"
               height="200"
@@ -46,21 +46,6 @@ export default function CTF() {
               <circle cx="15" cy="68" r="8" fill="hsl(var(--primary))" opacity="0.5" className="animate-bounce" style={{ animationDelay: '200ms' }} />
             </svg>
           </div>
-          
-          <div className="relative z-10 space-y-4">
-            <p className="text-2xl md:text-3xl font-semibold text-primary animate-pulse">
-              Coming Soon
-            </p>
-            <p className="text-lg text-muted-foreground max-w-md mx-auto">
-              Exciting Capture The Flag challenges are on the way. Stay tuned for security puzzles and hands-on hacking scenarios.
-            </p>
-          </div>
-        </div>
-
-        <div className="flex justify-center gap-2 mt-8">
-          <div className="w-3 h-3 rounded-full bg-primary animate-bounce" style={{ animationDelay: '0ms' }} />
-          <div className="w-3 h-3 rounded-full bg-primary animate-bounce" style={{ animationDelay: '150ms' }} />
-          <div className="w-3 h-3 rounded-full bg-primary animate-bounce" style={{ animationDelay: '300ms' }} />
         </div>
       </div>
     </section>
