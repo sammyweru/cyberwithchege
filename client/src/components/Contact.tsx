@@ -8,8 +8,7 @@ import { SiX } from "react-icons/si";
 import { useMutation } from "@tanstack/react-query";
 import { apiRequest } from "@/lib/queryClient";
 import { useToast } from "@/hooks/use-toast";
-import { contactFormSchema } from "@shared/schema";
-
+import { contactFormSchema } from "@/lib/shared/schema";
 type ContactForm = {
   name: string;
   email: string;
